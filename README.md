@@ -1,8 +1,6 @@
 Textbook
 ========
 
-
-
 Responsive Wordpress theme.
 
 
