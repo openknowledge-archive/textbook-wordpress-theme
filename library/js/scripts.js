@@ -100,4 +100,25 @@ $(document).ready(function() {
 	
 	$('.dropdown-toggle').dropdown();
  
+ 
+  /* Textbook Theme */
+	/* ============== */
+	
+	// add the 'top' class to body
+  $("body.page-template-page-homepage-php").addClass("top");
+ 
 }); /* end of as page load scripts */
+
+// bind a function to the window's scroll event
+$(window).scroll(function() {    
+    // get the amount the window has scrolled
+    var scroll = $(window).scrollTop();
+		// remove 'top' class from body if scrolled
+		if (scroll != 0) {
+        $("body.page-template-page-homepage-php").removeClass("top");
+    }
+		// add the 'top' class if scroll returned to zero
+    if (scroll == 0) {
+        $("body.page-template-page-homepage-php").addClass("top");
+    }
+});

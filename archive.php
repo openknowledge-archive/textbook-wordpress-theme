@@ -1,8 +1,9 @@
 <?php get_header(); ?>
+  <div class="container">
 			
-			<div id="content" class="clearfix row-fluid">
+			<div id="content" class="clearfix row">
 			
-				<div id="main" class="span8 clearfix" role="main">
+				<div id="main" class="span7 clearfix" role="main">
 				
 					<div class="page-header">
 					<?php if (is_category()) { ?>
@@ -95,4 +96,5 @@
     
 			</div> <!-- end #content -->
 
+  </div> <!-- end #container -->
 <?php get_footer(); ?>

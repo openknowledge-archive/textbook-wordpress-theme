@@ -211,7 +211,7 @@ function optionsframework_page() {
 	?>
     
 	<div class="wrap">
-	<div class="icon32" id="options_ico"><br /></div>
+	<div class="icon32" id="icon-themes"><br /></div>
     <?php //screen_icon( 'themes' ); 
     ?>
     <h2 class="nav-tab-wrapper">

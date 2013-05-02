@@ -1,8 +1,9 @@
 <?php get_header(); ?>
+  <div class="container">
 			
-			<div id="content" class="clearfix row-fluid">
+			<div id="content" class="clearfix row">
 			
-				<div id="main" class="span8 clearfix" role="main">
+				<div id="main" class="span7 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -36,7 +37,14 @@
 							<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-success edit-post"><i class="icon-pencil icon-white"></i> <?php _e("Edit post","bonestheme"); ?></a>
 							<?php } ?>
 							
-						</footer> <!-- end article footer -->
+						<?php if(of_get_option('site_sharing', '1')) {?>
+              <ul class="socialcount" data-url="<?php echo get_permalink( $post->ID ); ?>">
+                <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink( $post->ID ); ?>" title="Share on Facebook"><span class="icon icon-facebook"></span><span class="count">Like</span></a></li>
+                <li class="twitter"><a href="https://twitter.com/intent/tweet?text=<?php echo get_permalink( $post->ID ); ?>" title="Share on Twitter"><span class="icon icon-twitter"></span><span class="count">Tweet</span></a></li>
+                <li class="googleplus"><a href="https://plus.google.com/share?url=<?php echo get_permalink( $post->ID ); ?>" title="Share on Google Plus"><span class="icon icon-googleplus"></span><span class="count">+1</span></a></li>        
+              </ul>
+              <?php } ?>
+          </footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
 					
@@ -65,4 +73,5 @@
     
 			</div> <!-- end #content -->
 
+  </div> <!-- end #container -->
 <?php get_footer(); ?>

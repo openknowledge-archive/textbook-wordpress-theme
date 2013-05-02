@@ -77,7 +77,74 @@ function optionsframework_options() {
 		
 	$options = array();
 		
-	$options[] = array( "name" => "Typography",
+	$options[] = array( "name" => "Settings",
+						"type" => "heading");
+						
+	$options[] = array( "name" => "Header Position",
+						"desc" => "Fixed to the top of the window or scroll with content.",
+						"id" => "nav_position",
+						"std" => "",
+						"type" => "select",
+						"class" => "mini", //mini, tiny, small
+						"options" => $fixed_scroll);
+						
+	$options[] = array( "name" => "Logo",
+						"desc" => "URL of logo image",
+						"id" => "textbook_logo",
+						"std" => "",
+						"type" => "text");
+						
+	$options[] = array( "name" => "Number of Latest Posts on Home Page",
+						"desc" => "",
+						"id" => "number_posts",
+						"std" => "1",
+						"type" => "select",
+						"options" => array("1" => "1","2" => "2"));
+						
+	$options[] = array( "name" => "Sharing",
+						"desc" => "Enable sharing",
+						"id" => "site_sharing",
+						"std" => "1",
+						"type" => "checkbox");
+						
+	$options[] = array( "name" => "Footer Text",
+						"desc" => "This replaces the standard &copy; line",
+						"id" => "footer_text",
+						"std" => "",
+						"type" => "textarea");
+						
+	$options[] = array( "name" => "Advanced",
+						"type" => "heading");
+						
+	$options[] = array( "name" => "CSS",
+						"desc" => "Additional CSS",
+						"id" => "wpbs_css",
+						"std" => "",
+						"type" => "textarea");
+	
+	$options[] = array( "name" => "Theme",
+						"type" => "heading");
+						
+	$options[] = array( "name" => "Bootswatch.com Themes",
+						"desc" => "Use theme from bootswatch.com. Note: This may override other styles set in the theme options panel.",
+						"id" => "showhidden_themes",
+						"std" => "0",
+						"type" => "checkbox");
+						
+	$options[] = array( "name" => "Select a theme",
+						"id" => "wpbs_theme",
+						"std" => "default",
+						"class" => "hidden",
+						"type" => "images",
+						"options" => $theList
+						);
+						
+	$options[] = array( "name" => "Refresh themes from Bootswatch",
+						"type" => "themecheck",
+						"id" => "themecheck"
+						);
+						
+	$options[] = array( "name" => "Examples",
 						"type" => "heading");
 						
 	$options[] = array( "name" => "Headings",
@@ -109,17 +176,37 @@ function optionsframework_options() {
 						"id" => "link_active_color",
 						"std" => "",
 						"type" => "color");
+
+	$options[] = array( "name" => "Slider carousel on homepage",
+						"desc" => "Display the bootstrap slider carousel on homepage page template. This uses the wordpress featured images.",
+						"id" => "showhidden_slideroptions",
+						"std" => "0",
+						"type" => "checkbox");
+
+	$options[] = array( "name" => "Slider options",
+						"desc" => "Number of posts to show.",
+						"id" => "slider_options",
+						"class" => "mini hidden",
+						"std" => "5",
+						"type" => "text");
 						
-	$options[] = array( "name" => "Top Nav",
-						"type" => "heading");
-						
-	$options[] = array( "name" => "Position",
-						"desc" => "Fixed to the top of the window or scroll with content.",
-						"id" => "nav_position",
+	$options[] = array( "name" => "Homepage page template hero-unit background color",
+						"desc" => "Default used if no color is selected.",
+						"id" => "hero_unit_bg_color",
 						"std" => "",
-						"type" => "select",
-						"class" => "mini", //mini, tiny, small
-						"options" => $fixed_scroll);
+						"type" => "color");
+						
+	$options[] = array( "name" => "'Comments are closed' message on pages",
+						"desc" => "Suppress 'Comments are closed' message",
+						"id" => "suppress_comments_message",
+						"std" => "1",
+						"type" => "checkbox");
+						
+	$options[] = array( "name" => "Blog page 'hero' unit",
+						"desc" => "Display blog page hero unit",
+						"id" => "blog_hero",
+						"std" => "1",
+						"type" => "checkbox");
 						
 	$options[] = array( "name" => "Top nav background color",
 						"desc" => "Default used if no color is selected.",
@@ -169,68 +256,6 @@ function optionsframework_options() {
 						"id" => "search_bar",
 						"std" => "",
 						"type" => "checkbox");
-						
-	$options[] = array( "name" => "Theme",
-						"type" => "heading");
-						
-	$options[] = array( "name" => "Bootswatch.com Themes",
-						"desc" => "Use theme from bootswatch.com. Note: This may override other styles set in the theme options panel.",
-						"id" => "showhidden_themes",
-						"std" => "0",
-						"type" => "checkbox");
-						
-	$options[] = array( "name" => "Select a theme",
-						"id" => "wpbs_theme",
-						"std" => "default",
-						"class" => "hidden",
-						"type" => "images",
-						"options" => $theList
-						);
-						
-	$options[] = array( "name" => "Refresh themes from Bootswatch",
-						"type" => "themecheck",
-						"id" => "themecheck"
-						);
-						
-	$options[] = array( "name" => "Other Settings",
-						"type" => "heading");
-
-	$options[] = array( "name" => "Slider carousel on homepage",
-						"desc" => "Display the bootstrap slider carousel on homepage page template. This uses the wordpress featured images.",
-						"id" => "showhidden_slideroptions",
-						"std" => "0",
-						"type" => "checkbox");
-
-	$options[] = array( "name" => "Slider options",
-						"desc" => "Number of posts to show.",
-						"id" => "slider_options",
-						"class" => "mini hidden",
-						"std" => "5",
-						"type" => "text");
-						
-	$options[] = array( "name" => "Homepage page template hero-unit background color",
-						"desc" => "Default used if no color is selected.",
-						"id" => "hero_unit_bg_color",
-						"std" => "",
-						"type" => "color");
-						
-	$options[] = array( "name" => "'Comments are closed' message on pages",
-						"desc" => "Suppress 'Comments are closed' message",
-						"id" => "suppress_comments_message",
-						"std" => "1",
-						"type" => "checkbox");
-						
-	$options[] = array( "name" => "Blog page 'hero' unit",
-						"desc" => "Display blog page hero unit",
-						"id" => "blog_hero",
-						"std" => "1",
-						"type" => "checkbox");
-	
-	$options[] = array( "name" => "CSS",
-						"desc" => "Additional CSS",
-						"id" => "wpbs_css",
-						"std" => "",
-						"type" => "textarea");
 									
 	return $options;
 }

@@ -41,9 +41,6 @@
 		
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-  		<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/less/bootstrap.less">
-  		<link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/less/responsive.less">
-
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
@@ -95,9 +92,11 @@
 				
 				<div class="navbar navbar-fixed-top">
 					<div class="navbar-inner">
-						<div class="container-fluid nav-container">
+						<div class="container nav-container">
 							<nav role="navigation">
-								<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+								<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
+								  <img src="<?php echo of_get_option('textbook_logo') ?>" alt="<?php bloginfo('name'); ?>" />
+                </a>
 								
 								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 							        <span class="icon-bar"></span>
@@ -124,5 +123,4 @@
 			</div> <!-- end #inner-header -->
 		
 		</header> <!-- end header -->
-		
-		<div class="container-fluid">
+	

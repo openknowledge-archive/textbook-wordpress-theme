@@ -24,7 +24,7 @@ require_once('library/shortcodes.php');
 // Custom Backend Footer
 add_filter('admin_footer_text', 'bones_custom_admin_footer');
 function bones_custom_admin_footer() {
-	echo '<span id="footer-thankyou">Developed by <a href="http://320press.com" target="_blank">320press</a></span>. Built using <a href="http://themble.com/bones" target="_blank">Bones</a>.';
+	echo '<span id="footer-thankyou">Theme by <a href="http://www.mintcanary.com/" target="_blank">Mint Canary</a></span>. Built using <a href="http://320press.com" target="_blank">WordPress Bootstrap</a>.';
 }
 
 // adding it to the admin area
@@ -90,8 +90,8 @@ function bones_register_sidebars() {
       'name' => 'Footer 1',
       'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h5 class="widgettitle">',
+      'after_title' => '</h5>',
     ));
 
     register_sidebar(array(
@@ -99,8 +99,8 @@ function bones_register_sidebars() {
       'name' => 'Footer 2',
       'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h5 class="widgettitle">',
+      'after_title' => '</h5>',
     ));
 
     register_sidebar(array(
@@ -108,8 +108,8 @@ function bones_register_sidebars() {
       'name' => 'Footer 3',
       'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h5 class="widgettitle">',
+      'after_title' => '</h5>',
     ));
     
     
@@ -138,7 +138,7 @@ function bones_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class(); ?>>
 		<article id="comment-<?php comment_ID(); ?>" class="clearfix">
-			<div class="comment-author vcard row-fluid clearfix">
+			<div class="comment-author vcard row clearfix">
 				<div class="avatar span2">
 					<?php echo get_avatar($comment,$size='75',$default='<path_to_url>' ); ?>
 				</div>
@@ -523,7 +523,7 @@ add_action('wp_enqueue_scripts', 'theme_js');
 // Get theme options
 function get_wpbs_theme_options(){
   $theme_options_styles = '';
-    
+      /*
       $heading_typography = of_get_option('heading_typography');
       if ( $heading_typography['face'] != 'Default' ) {
         $theme_options_styles .= '
@@ -543,7 +543,7 @@ function get_wpbs_theme_options(){
           color: ' . $main_body_typography['color'] . '; 
         }';
       }
-      
+      */
       $link_color = of_get_option('link_color');
       if ($link_color) {
         $theme_options_styles .= '
@@ -680,6 +680,7 @@ function get_wpbs_theme_options(){
       }
 } // end get_wpbs_theme_options function
 
-
+// Remove Admin Bar Front End
+add_filter('show_admin_bar', '__return_false');
 
 ?>
