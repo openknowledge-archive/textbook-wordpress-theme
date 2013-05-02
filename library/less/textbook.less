@@ -476,9 +476,34 @@ body.okf-panel .okfn-ribbon a {
 	display:none;
 }
 
+
 @media only screen and (min-width: 980px) {
 	body{
 		padding-top: 100px;
+	}
+}
+
+@media (max-width: 979px) {
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
+	.okfn-ribbon {
+		display:none;
+	}
+}
+
+@media (max-width: 767px) {
+  article > .banner,
+	body > footer {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+	body > footer > #inner-footer {
+		padding-left:20px;
+		padding-right:20px;
+	}
+	body > footer .widget > div {
+		border:none;
 	}
 }
 
