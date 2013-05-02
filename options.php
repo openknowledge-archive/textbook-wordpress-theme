@@ -121,7 +121,7 @@ function optionsframework_options() {
 						"id" => "wpbs_css",
 						"std" => "",
 						"type" => "textarea");
-	
+	/*
 	$options[] = array( "name" => "Theme",
 						"type" => "heading");
 						
@@ -256,7 +256,7 @@ function optionsframework_options() {
 						"id" => "search_bar",
 						"std" => "",
 						"type" => "checkbox");
-									
+	*/								
 	return $options;
 }
 

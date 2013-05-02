@@ -543,7 +543,7 @@ function get_wpbs_theme_options(){
           color: ' . $main_body_typography['color'] . '; 
         }';
       }
-      */
+      
       $link_color = of_get_option('link_color');
       if ($link_color) {
         $theme_options_styles .= '
@@ -567,7 +567,7 @@ function get_wpbs_theme_options(){
           color: ' . $link_active_color . '; 
         }';
       }
-      
+      */
       $topbar_position = of_get_option('nav_position');
       if ($topbar_position == 'scroll') {
         $theme_options_styles .= '
@@ -580,7 +580,7 @@ function get_wpbs_theme_options(){
         ' 
         ;
       }
-      
+      /*
       $topbar_bg_color = of_get_option('top_nav_bg_color');
       if ( $topbar_bg_color ) {
         $theme_options_styles .= '
@@ -649,7 +649,7 @@ function get_wpbs_theme_options(){
           background-color: '. $hero_unit_bg_color . ';
         }';
       }
-      
+      */
       $suppress_comments_message = of_get_option('suppress_comments_message');
       if ($suppress_comments_message){
         $theme_options_styles .= '
@@ -668,7 +668,7 @@ function get_wpbs_theme_options(){
         . $theme_options_styles . '
         </style>';
       }
-    
+      /*
       $bootstrap_theme = of_get_option('wpbs_theme');
       $use_theme = of_get_option('showhidden_themes');
       
@@ -678,6 +678,7 @@ function get_wpbs_theme_options(){
           echo '<link rel="stylesheet" href="' . get_template_directory_uri() . '/admin/themes/' . $bootstrap_theme . '.css">';
         }
       }
+			*/
 } // end get_wpbs_theme_options function
 
 // Remove Admin Bar Front End
