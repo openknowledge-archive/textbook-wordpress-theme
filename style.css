@@ -1,11 +1,13 @@
 @import url('library/css/wpbs.css');
 
 @import url(http://fonts.googleapis.com/css?family=Capriola);
+
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,400italic,700,700italic);
 /*
 Theme Name: Textbook
 Theme URI: https://github.com/mintcanary/textbook-wordpress-theme
 Description: Theme for LinkedUp Project, based on WP-Bootstrap.
-Version: 0.1.2
+Version: 0.1.3
 Author: Mint Canary
 Author URI: http://www.mintcanary.com/
 Tags: okf
@@ -13,6 +15,18 @@ License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 /* Fonts */
+body {
+  font-family: Cabin, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body > header {
+  font-family: Capriola, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 h1,
 h2,
 h3,
@@ -49,7 +63,7 @@ h5 {
   line-height: normal;
 }
 h6 {
-  font-size: 15px;
+  font-size: 16px;
   line-height: normal;
 }
 h1 small {
@@ -76,6 +90,9 @@ a {
 a:hover {
   color: #2f4e63;
   text-decoration: none;
+}
+.lead {
+  font-size: 20px;
 }
 /* Buttons */
 .btn {
@@ -121,7 +138,6 @@ body > footer {
   background-position: center bottom;
 }
 body {
-  font-family: Capriola, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 28px;
   background-image: url(images/bg.png);

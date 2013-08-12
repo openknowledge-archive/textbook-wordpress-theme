@@ -2,6 +2,21 @@
 
 /* Fonts */
 @import url(http://fonts.googleapis.com/css?family=Capriola);
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,400italic,700,700italic);
+
+body {
+	font-family: Cabin, "Helvetica Neue", Helvetica, Arial,sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body > header {
+	font-family: Capriola, "Helvetica Neue", Helvetica, Arial,sans-serif;
+}
 
 h1,
 h2,
@@ -39,7 +54,7 @@ h5 {
   line-height: normal;
 }
 h6 {
-  font-size: 15px;
+  font-size: 16px;
   line-height: normal;
 }
 h1 small {
@@ -68,6 +83,10 @@ a {
 a:hover {
   color: @blue;
 	text-decoration:none;
+}
+
+.lead {
+	font-size:20px;
 }
 
 
@@ -121,7 +140,6 @@ body > footer {
 }
 
 body {
-	font-family: Capriola, "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 16px;
 	line-height: 28px;
 	background-image: url(images/bg.png);
