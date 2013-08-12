@@ -8,7 +8,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
 	font-weight:normal;
 	color:@blue;
 }
@@ -334,9 +340,8 @@ body.okf-panel .okfn-ribbon a {
 
 
 /* Widgets */
-.blog-latest .thumb,
 .sidebar {
-	text-align:center;
+	text-align:right;
 }
 .blog-latest .thumb a,
 .sidebar .widget {
@@ -504,7 +509,6 @@ body.okf-panel .okfn-ribbon a {
 	margin-bottom:50px;
 }
 .blog-latest .thumb {
-	text-align:center;
 	min-width: 318px;
 }
 .blog-latest .excerpt .more-link {
@@ -565,6 +569,10 @@ body.okf-panel .okfn-ribbon a {
 	}
 	body > footer .widget > div {
 		border:none;
+	}
+	.sidebar,
+  .blog-latest .thumb {
+		text-align:center;
 	}
 }
 

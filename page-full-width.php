@@ -10,7 +10,7 @@ Template Name: Full Width Page
 		<div class="container">
 			<div id="content" class="clearfix row">
 			
-				<div id="main" class="span12 clearfix" role="main">
+				<div id="main" class="span16 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

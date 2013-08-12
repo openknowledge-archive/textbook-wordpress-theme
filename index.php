@@ -20,7 +20,7 @@
 			-->
 			<div id="content" class="clearfix row">
 			
-				<div id="main" class="span7 clearfix" role="main">
+				<div id="main" class="span10 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

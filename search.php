@@ -3,7 +3,7 @@
 			
 			<div id="content" class="clearfix row">
 			
-				<div id="main" class="span7 clearfix" role="main">
+				<div id="main" class="span10 clearfix" role="main">
 				
 					<div class="page-header"><h1><span><?php _e("Search Results for","bonestheme"); ?>:</span> <?php echo esc_attr(get_search_query()); ?></h1></div>
 

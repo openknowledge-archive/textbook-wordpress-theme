@@ -3,7 +3,7 @@
 			
 			<div id="content" class="clearfix row">
 			
-				<div id="main" class="span12 clearfix" role="main">
+				<div id="main" class="span16 clearfix" role="main">
 
 					<article id="post-not-found" class="clearfix">
 						
@@ -23,7 +23,7 @@
 							<p>Whatever you were looking for was not found, but maybe try looking again or search using the form below.</p>
 
 							<div class="row">
-								<div class="span12">
+								<div class="span16">
 									<?php get_search_form(); ?>
 								</div>
 							</div>

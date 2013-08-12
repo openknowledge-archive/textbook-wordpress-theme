@@ -84,7 +84,7 @@ get_header(); ?>
 			
 				</div> <!-- end #main -->
 				
-				<div id="sidebar1" class="span5 sidebar" role="complementary">
+				<div id="sidebar1" class="span6 sidebar" role="complementary">
 				
 					<?php if ( !empty($post->post_excerpt) ) { ?> 
 					<p class="alert alert-block success"><?php echo get_the_excerpt(); ?></p>

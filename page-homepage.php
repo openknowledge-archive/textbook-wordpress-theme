@@ -27,10 +27,10 @@ Template Name: Homepage
       <div class="container">
         <div id="content" class="clearfix row">
         
-          <div id="main" class="span12 clearfix" role="main">
+          <div id="main" class="span16 clearfix" role="main">
 						<section class="row post_content">
 						
-							<div class="span7">
+							<div class="span10">
 								<h1><?php the_title(); ?></h1>
 								<?php the_content(); ?>
 							</div>
@@ -97,10 +97,10 @@ Template Name: Homepage
         }
         ?>
         <div class="row">
-				  <div class="span5 thumb">
+				  <div class="span6 thumb">
             <a href="<?php the_permalink(); ?>" style="background-image:url(<?php echo $imgurl ?>)"></a>
           </div>
-          <div class="span7">
+          <div class="span10">
             <h2><?php the_title(); ?></h2>
             <div class="excerpt">
               <?php the_excerpt() ?>
