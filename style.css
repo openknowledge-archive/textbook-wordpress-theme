@@ -324,6 +324,14 @@ body > footer .footer-links a:hover {
   text-decoration: none;
   font-size: 12px;
 }
+#main article {
+  border: none;
+  background-image: url(images/divider.png);
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  margin-bottom: 15px;
+  padding-bottom: 55px;
+}
 /* OKF Panel */
 body.okf-panel .navbar .nav {
   margin-right: 50px;
