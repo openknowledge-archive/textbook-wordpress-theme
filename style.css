@@ -212,6 +212,7 @@ body {
   border-bottom-color: rgba(255, 255, 255, 0.8);
   border-top-color: #ffffff;
   border-top-color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
 }
 .navbar .nav li.dropdown > .dropdown-toggle:hover .caret {
   border-bottom-color: #ffffff;
@@ -450,8 +451,27 @@ body.okf-panel .okfn-ribbon a {
 .sidebar .widget .textwidget > .full {
   margin-left: -20px;
 }
+/* Search Widget */
+.sidebar .widget.widget_search form {
+  padding: 0;
+  margin: 0;
+}
+.sidebar .widget_search .add-on {
+  display: none;
+}
+.sidebar .widget_search .input-append,
+.sidebar .widget_search .input-prepend {
+  margin: 0;
+}
 .sidebar .widget_search input {
-  width: 160px;
+  width: 213px;
+  border: none;
+  padding: 14px 16px;
+}
+.sidebar .widget_search .input-append .btn,
+.sidebar .widget_search .input-prepend .btn {
+  height: 49px;
+  margin: -1px 0 0 0;
 }
 /* Homepage */
 .page-template-page-homepage-php .navbar-inner {
