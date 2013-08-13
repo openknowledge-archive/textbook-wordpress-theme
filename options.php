@@ -99,7 +99,7 @@ function optionsframework_options() {
 						"id" => "number_posts",
 						"std" => "1",
 						"type" => "select",
-						"options" => array("1" => "1","2" => "2"));
+						"options" => array("1" => "1","2" => "2","3" => "3"));
 						
 	$options[] = array( "name" => "Sharing",
 						"desc" => "Enable sharing",

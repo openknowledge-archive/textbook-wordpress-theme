@@ -401,6 +401,11 @@ body.okf-panel .okfn-ribbon a {
   margin-left: -49px;
   background-image: url(images/tape.png);
 }
+.sidebar,
+.sidebar li {
+  font-size: 14px;
+  line-height: 18px;
+}
 .sidebar .widget > * {
   padding-left: 20px;
   padding-right: 20px;
@@ -561,23 +566,82 @@ body.okf-panel .okfn-ribbon a {
 }
 .sidebar .widget .tweetfeed li {
   display: block;
-  border-bottom: dotted 1px #cccccc;
-  padding: 10px 0;
+  border-bottom: dotted 2px #cccccc;
+  padding: 25px 0 0 65px;
+  position: relative;
 }
-.sidebar .widget .tweetfeed li img {
-  float: left;
+.sidebar .widget .tweetfeed li:first-child {
+  padding-top: 0;
+}
+.sidebar .widget .tweetfeed li:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+.sidebar .widget .tweetfeed li img.tweet-twittar {
+  position: absolute;
+  left: 0;
   width: 48px;
-  height: 48px;
-  padding: 3px;
-  margin: 0 7px 3px 0;
-  border: solid 1px #cccccc;
-  background-color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
-.sidebar .widget .tweetfeed li .tweetcontent {
+.sidebar .widget .tweetfeed li .tweet-name a {
+  color: #333333;
+  font-weight: bold;
+}
+.sidebar .widget .tweetfeed li .tweet-screen-name,
+.sidebar .widget .tweetfeed li .tweet-screen-name a {
+  color: #b3b3b3;
+}
+.sidebar .widget .tweetfeed li .tweet-screen-name:before {
+  content: ' ';
+}
+.sidebar .widget .tweetfeed li .tweet-content {
   display: block;
+  margin: 0;
 }
-.sidebar .widget .tweetfeed li img + .tweetcontent {
-  min-height: 36px;
+.sidebar .widget .tweetfeed li .tweet-timestamp,
+.sidebar .widget .tweetfeed li .tweet-timestamp a {
+  color: #b3b3b3;
+}
+.sidebar .widget .tweetfeed li .intent-meta {
+  display: block;
+  text-align: right;
+}
+.sidebar .widget .tweetfeed li .intent-meta a {
+  display: inline-block;
+  background-image: url(images/twitter-icons.png);
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+  overflow: hidden;
+  text-indent: 999px;
+}
+.sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(1) {
+  background-position: center 2px;
+}
+.sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(2) {
+  background-position: center -48px;
+}
+.sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(3) {
+  background-position: center -98px;
+}
+.sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(1):hover {
+  background-position: center -148px;
+}
+.sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(2):hover {
+  background-position: center -198px;
+}
+.sidebar .widget .tweetfeed li .intent-meta a:nth-of-type(3):hover {
+  background-position: center -248px;
+}
+@media (min-width: 768px) {
+  .sidebar .widget .tweetfeed li .intent-meta {
+    visibility: hidden;
+  }
+  .sidebar .widget .tweetfeed li:hover .intent-meta {
+    visibility: visible;
+  }
 }
 @media only screen and (min-width: 980px) {
   body {
