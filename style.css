@@ -7,7 +7,7 @@
 Theme Name: Textbook
 Theme URI: https://github.com/mintcanary/textbook-wordpress-theme
 Description: Theme for LinkedUp Project, based on WP-Bootstrap.
-Version: 0.1.4
+Version: 0.1.5
 Author: Mint Canary
 Author URI: http://www.mintcanary.com/
 Tags: okf
@@ -124,6 +124,17 @@ a:hover {
 .btn-primary.disabled,
 .btn-primary[disabled] {
   background-color: #2f4e63;
+}
+.navbar .btn-navbar,
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active,
+.navbar .btn-navbar.disabled,
+.navbar .btn-navbar[disabled] {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
 }
 html,
 body {
@@ -676,6 +687,34 @@ body.okf-panel .okfn-ribbon a {
   }
   .okfn-ribbon {
     display: none;
+  }
+  .navbar .nav {
+    float: none;
+    margin-left: 5px;
+  }
+  .navbar .nav > li > a {
+    margin: 0;
+  }
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .dropdown-menu a:hover {
+    background-color: transparent;
+  }
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    color: #ffffff;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px -1px 0px #000000;
+    filter: dropshadow(color=#000000, offx=0, offy=-1);
+    font-weight: normal;
+  }
+  .dropdown-menu li > a:hover,
+  .dropdown-menu li > a:focus,
+  .dropdown-submenu:hover > a,
+  .dropdown-menu .active > a,
+  .dropdown-menu .active > a:hover {
+    background-color: transparent;
+    background-image: none;
+    filter: none;
   }
 }
 @media (max-width: 767px) {
