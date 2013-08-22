@@ -91,6 +91,12 @@ a:hover {
   color: #2f4e63;
   text-decoration: none;
 }
+a.thumbnail:hover {
+  border-color: #2f4e63;
+  -webkit-box-shadow: 0 1px 4px rgba(47, 78, 99, 0.25);
+  -moz-box-shadow: 0 1px 4px rgba(47, 78, 99, 0.25);
+  box-shadow: 0 1px 4px rgba(47, 78, 99, 0.25);
+}
 .lead {
   font-size: 20px;
 }
