@@ -438,17 +438,51 @@ body.okf-panel .okfn-ribbon a {
 	line-height:18px;
 }
 
-.sidebar .widget > * {
+.sidebar .widget > div,
+.sidebar .widget > ul > li,
+.sidebar .widget > .widgettitle,
+.sidebar .widget .menu-categories-container > ul li {
 	padding-left:20px;
 	padding-right:20px;
 }
-.sidebar .widget > *:last-child {
-	padding-bottom:20px;
+.sidebar .widget > select {
+	margin-left:20px;
+	margin-right:20px;
 }
-.sidebar .widget h4 {
+.sidebar .widget > *:last-child {
+	margin-bottom:20px;
+}
+.sidebar .widget .widgettitle {
 	margin:0;
 	padding-top:25px;
 	padding-bottom:10px;
+	border-bottom:solid 1px #e2f1f7;
+	margin-bottom:20px;
+}
+.sidebar .widget > ul,
+.sidebar .widget .menu-categories-container > ul {
+	margin:-19px 0 0 0;
+}
+.sidebar .widget > ul > li,
+.sidebar .widget .menu-categories-container > ul li {
+	display:block;
+	border-bottom:solid 1px #dff0f7;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+.sidebar .widget .menu-categories-container {
+	padding:0;
+}
+.sidebar .widget select,
+.sidebar .widget input,
+.sidebar .widget button {
+	width:280px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.sidebar .widget input {
+	height:28px;
 }
 .sidebar .widget .textwidget {
 	/*background-image: url(images/lined-paper.png);*/
@@ -480,25 +514,35 @@ body.okf-panel .okfn-ribbon a {
 
 /* Search Widget */
 .sidebar .widget.widget_search form {
-	padding:0;
-	margin:0;
+	margin:23px 20px 20px 20px;
+}
+.sidebar .widget.widget_search .widgettitle + form {
+	margin-top:0;
 }
 .sidebar .widget_search .add-on {
 	display:none;
 }
 .sidebar .widget_search .input-append,
 .sidebar .widget_search .input-prepend {
-	margin:0;
+	white-space:normal;
+	
 }
 .sidebar .widget_search input {
-	width: 213px;
-	border:none;
-	padding: 14px 16px;
+	margin-bottom:10px;
 }
-.sidebar .widget_search .input-append .btn,
-.sidebar .widget_search .input-prepend .btn {
-	height:49px;
-	margin:-1px 0 0 0;
+.sidebar .widget_search .input-prepend.input-append input,
+.sidebar .widget_search .input-prepend.input-append select,
+.sidebar .widget_search .input-prepend.input-append .uneditable-input {
+  -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.sidebar .widget_search .input-prepend.input-append .add-on:last-child,
+.sidebar .widget_search .input-prepend.input-append .btn:last-child {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-left: 0;
 }
 
 
@@ -590,13 +634,14 @@ body.okf-panel .okfn-ribbon a {
 
 
 /* JM Last Twit */
-.sidebar .widget .tweetfeed {
-	margin:0 0 10px 0;
+.sidebar .widget .textwidget > .tweetfeed {
+	margin:0;
+	padding:0;
 }
 .sidebar .widget .tweetfeed li {
 	display:block;
-	border-bottom:dotted 2px #cccccc;
-	padding:25px 0 0 65px;
+	border-bottom:solid 1px #e2f1f7;
+	padding:25px 20px 0 85px;
 	position:relative;
 }
 .sidebar .widget .tweetfeed li:first-child {
@@ -608,7 +653,7 @@ body.okf-panel .okfn-ribbon a {
 }
 .sidebar .widget .tweetfeed li img.tweet-twittar {
 	position:absolute;
-	left:0;
+	left:20px;
 	width:48px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
