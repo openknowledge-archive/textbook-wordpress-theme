@@ -7,7 +7,7 @@
 Theme Name: Textbook
 Theme URI: https://github.com/mintcanary/textbook-wordpress-theme
 Description: Theme for LinkedUp Project, based on WP-Bootstrap.
-Version: 0.1.6
+Version: 0.1.7
 Author: Mint Canary
 Author URI: http://www.mintcanary.com/
 Tags: okf
@@ -122,15 +122,20 @@ a.thumbnail:hover {
   font-size: 20px;
 }
 /* Buttons */
-.btn {
+.btn,
+input[type="submit"] {
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 .btn-large {
   -webkit-border-radius: 8px 57px 29px 20px / 10px 17px 13px 13px;
   border-radius: 8px 57px 29px 20px / 10px 17px 13px 13px;
 }
-.btn-primary {
+.btn-primary,
+input[type="submit"] {
   background-color: #2f4e63;
   background-image: -moz-linear-gradient(top, #375c74, #2f4e63);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, fromlighten(#2f4e63, 5%), to(#2f4e63));
@@ -144,6 +149,7 @@ a.thumbnail:hover {
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  color: #fff;
 }
 .btn-primary:hover,
 .btn-primary:active,
@@ -485,7 +491,8 @@ body.okf-panel .okfn-ribbon a {
 }
 .sidebar .widget select,
 .sidebar .widget input,
-.sidebar .widget button {
+.sidebar .widget button,
+.sidebar .widget input#s {
   width: 280px;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */

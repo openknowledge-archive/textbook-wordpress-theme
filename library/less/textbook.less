@@ -120,16 +120,21 @@ a.thumbnail:hover {
 
 
 /* Buttons */
-.btn {
+.btn,
+input[type="submit"] {
 	-webkit-box-shadow:  0px 1px 2px 0px rgba(0, 0, 0, 0.5);
   box-shadow:  0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 .btn-large {
 	-webkit-border-radius: 8px 57px 29px 20px e('/') 10px 17px 13px 13px;
 	border-radius: 8px 57px 29px 20px e('/') 10px 17px 13px 13px;
 }
 
-.btn-primary {
+.btn-primary,
+input[type="submit"] {
   background-color: @blue;
   background-image: -moz-linear-gradient(top, lighten(@blue, 5%), @blue);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, fromlighten(@blue, 5%), to(@blue));
@@ -142,6 +147,7 @@ a.thumbnail:hover {
   *background-color: @blue;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	color:#fff;
 }
 .btn-primary:hover,
 .btn-primary:active,
@@ -496,7 +502,8 @@ body.okf-panel .okfn-ribbon a {
 }
 .sidebar .widget select,
 .sidebar .widget input,
-.sidebar .widget button {
+.sidebar .widget button,
+.sidebar .widget input#s {
 	width:280px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
