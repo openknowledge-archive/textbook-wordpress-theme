@@ -12,7 +12,7 @@
 						<header>
 													
 							<div class="page-header">
-							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+							<?php //the_post_thumbnail( 'wpbs-featured' ); ?>
               <h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
               </div>
 							

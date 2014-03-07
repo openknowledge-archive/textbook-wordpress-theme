@@ -5,9 +5,26 @@ Template Name: Full Width Page
 ?>
 
 <?php get_header(); ?>
+
+<?php 
+$subbannercontent = get_post_meta($post->ID, 'sub-banner', true);
+if ( !empty($subbannercontent) ) { 
+?>
+<div class="sub-banner">
   <div class="container">
-		
-		<div class="container">
+    <? if ( has_post_thumbnail() ) { ?>
+    <div class="background">
+      <? the_post_thumbnail('large'); ?>
+    </div>
+    <? } ?>
+    <div class="content">
+      <? echo $subbannercontent; ?>
+    </div>
+  </div>
+</div>
+<? } ?>
+  
+  <div class="container">
 			<div id="content" class="clearfix row">
 			
 				<div id="main" class="span16 clearfix" role="main">

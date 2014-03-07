@@ -660,6 +660,38 @@ body.okf-panel .okfn-ribbon a {
 	display:none;
 }
 
+/* Sub Banner */
+.sub-banner {
+	overflow:hidden;
+	position:relative;
+	background-color:#fff;
+}
+.sub-banner .container {
+	position:relative;
+}
+.sub-banner .background {
+	position:absolute;
+	top:-320px;
+	right:0;
+	opacity:0.13;
+}
+.sub-banner .content {
+	position:relative;
+	z-index:1;
+	padding-top:50px;
+	padding-bottom:40px;
+}
+.sub-banner:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 7px;
+	background-image: url(images/zigzag.png);
+}
+
 
 /* JM Last Twit */
 .sidebar .widget .textwidget > .tweetfeed {
