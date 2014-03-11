@@ -88,8 +88,8 @@ function bones_register_sidebars() {
     register_sidebar(array(
       'id' => 'footer1',
       'name' => 'Footer 1',
-      'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
-      'after_widget' => '</div>',
+      'before_widget' => '',
+      'after_widget' => '',
       'before_title' => '<h5 class="widgettitle">',
       'after_title' => '</h5>',
     ));
@@ -97,20 +97,20 @@ function bones_register_sidebars() {
     register_sidebar(array(
       'id' => 'footer2',
       'name' => 'Footer 2',
-      'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
-      'after_widget' => '</div>',
+      'before_widget' => '',
+      'after_widget' => '',
       'before_title' => '<h5 class="widgettitle">',
       'after_title' => '</h5>',
     ));
 
-    register_sidebar(array(
-      'id' => 'footer3',
-      'name' => 'Footer 3',
-      'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h5 class="widgettitle">',
-      'after_title' => '</h5>',
-    ));
+    //register_sidebar(array(
+    //  'id' => 'footer3',
+    //  'name' => 'Footer 3',
+    //  'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
+    //  'after_widget' => '</div>',
+    //  'before_title' => '<h5 class="widgettitle">',
+    //  'after_title' => '</h5>',
+    //));
     
     
     /* 
